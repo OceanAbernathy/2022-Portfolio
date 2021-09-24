@@ -1,0 +1,19 @@
+.main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.blob {
+    width: 360px;
+}
+
+.blob image {
+    width: 115px;
+}
+
+.blob path {
+    fill: var(--icon-color);
+}

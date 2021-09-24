@@ -1,13 +1,237 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
+
+:root {
+  --header-height: 3rem;
+
+  /* Colors */
+
+  --main-color: hsl(161, 36%, 62%);
+  --light-accent: hsl(177, 42%, 66%);
+  --dark-accent: hsl(172, 47%, 48%);
+  --alt-light-color: hsl(24, 70%, 70%);
+  --alt-dark-color: hsl(341, 31%, 66%);
+  --body-color-light: hsl(0, 0%, 100%);
+  --body-color-dark: hsl(0, 0%, 0%);
+
+  --icon-color: hsl(13, 69%, 63%);
+
+  --font-color-light: hsl(0, 0%, 100%);
+  --font-color-dark: hsl(0, 0%, 0%);
+  --font-color-neutral: hsl(0, 0%, 35%);
+  --title-color: hsl(13, 69%, 53%);
+
+  /* Font & Typography */
+
+  --body-font: 'Poppins', sans-serif;
+
+  --standard-font-size: 1rem;
+  --large-font-size: 2rem;
+  --small-font-size: .85rem;
+  --smaller-font-size: .75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+
+  --font-medium-weight: 500;
+  --font-semi-bold: 600;
+
+  /* Margin Top */
+
+  --mt-1: 1rem;
+  --mt-1-5: 1.5rem;
+  --mt-2: 2rem;
+  --mt-2-5: 2.5rem;
+  --mt-3: 3rem;
+
+  /* Margin Bottom */
+
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* z index */
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Font size for Large screens */
+
+@media screen and (min-width: 968px) {
+  :root {
+  --standard-font-size: 1rem;
+  --large-font-size: 3rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .825rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  }
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--standard-font-size);
+  background-color: var(--main-color);
+  color: var(--font-color-light);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section Classes */
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section_title {
+  font-size: var(--h1-font-size);
+}
+
+.section_subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section_title,
+.section_subtitle {
+  text-align: center;
+}
+
+/* Layout */
+
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--main-color);
+}
+
+/* Nav */
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium-weight);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__logo:hover,
+.nav__toggle:hover {
+  color: var(--icon-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s;
+  }
+}
+
+.nav__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--font-color-dark);
+  font-weight: var(--font-medium-weight);
+}
+
+.nav__link:hover {
+  color: var(--font-color-neutral);
+}
+
+.nav__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.close__icon {
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: Var(--font-color-dark)
+}
+
+.close__icon:hover {
+  color: var(--font-color-neutral);
+}
+
+/* Show Menu */
+
+.show-menu {
+  bottom: 0;
 }
