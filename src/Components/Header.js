@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 
 function Header() {
@@ -23,14 +25,13 @@ function Header() {
 
         function linkAction(){
             const navMenu = document.getElementById('nav-menu')
-            // When we click on each nav__link, we remove the show-menu class
             navMenu.classList.remove('show-menu')
         }
         navLink.forEach(n => n.addEventListener('click', linkAction))
     });
 
     return (
-        <div className="header">
+        <header className="header" id="header">
             <nav className="nav container">
                 <a href="#" className="nav__logo">Ocean</a>
 
@@ -57,7 +58,7 @@ function Header() {
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="./Assets/OceanAbernathyResume.pdf" download className="nav__link">
+                            <a href="http://oceanabernathy.com/Ocean-Abernathy-Resume.pdf" target="_blank" rel='noreferrer' className="nav__link">
                             <i className="uil uil-file-download nav__icon"></i> Resume
                             </a>
                         </li>
@@ -75,7 +76,7 @@ function Header() {
                     </div>
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 

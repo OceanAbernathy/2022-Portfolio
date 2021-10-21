@@ -1,57 +1,54 @@
+/* eslint-disable */
+
 import React, {Component} from 'react';
+import Slider from './Slider.js';
 
 class Main extends Component {
+
+    state = {
+        isSwitchOn:true
+    }
+
     render() {
-
-        const skillsList = document.getElementsByClassName('skills__list'),
-              skillsHeader = document.getElementsByClassName('skills__header');
-
-        function toggle() {
-            if(skillsList.classList.contains('skills__open')) {
-                skillsList.classList.remove('skills__open')
-                skillsList.classList.add('skills__close')
-            }
-            else {
-                skillsList.classList.remove('skills__close')
-                skillsList.classList.add('skills__open')
-            }
-        }
-
-        
-
+        const isOn = this.state.isSwitchOn;
         return(
             <main className="main__content">
                 <span className="overlay"></span>
+
+                {/* Home */}
+
                 <section className="home section" id="home">
                     <div className="home__container container grid">
-                        <div className="home__content grid">
+                        <div className="home__content   ">
                             <div className="home__social">
-                                <a href="https://www.linkedin.com/in/ocean-abernathy/" target="_blank" className="home__social-icon">
+                                <a href="https://www.linkedin.com/in/ocean-abernathy/" target="_blank" rel="noreferrer" className="home__social-icon">
                                     <i className="uil uil-linkedin-alt social-icon"></i>
                                 </a>
-                                <a href="https://github.com/OceanAbernathy" target="_blank" className="home__social-icon">
+                                <a href="https://github.com/OceanAbernathy" target="_blank" rel="noreferrer" className="home__social-icon">
                                     <i className="uil uil-github-alt social-icon"></i>
                                 </a>
-                                <a href="mailto:ocean.abernathy@gmail.com" target="_blank" className="home__social-icon">
+                                <a href="mailto:ocean.abernathy@gmail.com" target="_blank" rel="noreferrer" className="home__social-icon">
                                     <i className="uil uil-envelope social-icon"></i>
                                 </a>
                             </div>
                             <div className="home__img">
-                                <svg className="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0" mask-type="alpha">
-                                        <path d="M42.5,-12.2C50.8,11.8,50.4,40.2,35,52.4C19.6,64.6,-10.7,60.5,-32.6,44.6C-54.5,28.7,-68.1,1.1,-61.3,-20.8C-54.4,-42.7,-27.2,-58.9,-5.1,-57.3C17.1,-55.6,34.2,-36.1,42.5,-12.2Z"  transform="translate(100 100)" />
-                                    </mask>
-                                    <g mask="url(#mask0)">
-                                        <path d="M42.5,-12.2C50.8,11.8,50.4,40.2,35,52.4C19.6,64.6,-10.7,60.5,-32.6,44.6C-54.5,28.7,-68.1,1.1,-61.3,-20.8C-54.4,-42.7,-27.2,-58.9,-5.1,-57.3C17.1,-55.6,34.2,-36.1,42.5,-12.2Z" transform="translate(100 100)" />
-                                        <image className="home__blob-img" x="40" y="48" href="./grayscale-portrait-updated-removebg.png" />
-                                    </g>
-                                </svg>
+                            <svg className="home__blob" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M115.5,52.8c8.3,24,7.9,52.4-7.5,64.6s-45.7,8.1-67.6-7.8S4.9,66.1,11.7,44.2C18.6,22.3,45.8,6.1,67.9,7.7
+                                    C90.1,9.4,107.2,28.9,115.5,52.8z" />
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M115.5,52.8c8.3,24,7.9,52.4-7.5,64.6s-45.7,8.1-67.6-7.8S4.9,66.1,11.7,44.2C18.6,22.3,45.8,6.1,67.9,7.7
+                                    C90.1,9.4,107.2,28.9,115.5,52.8z"/>
+                                    <image className="home__blob-img" x="12" y="12" href="./grayscale-portrait-updated-removebg.png" />
+                                </g>
+                            </svg>
                             </div>
 
                             <div className="home__data">
                                 <h1 className="home__title">Hello, my name is Ocean.</h1>
                                 <h2 className="home__subtitle">Front-End Web Developer</h2>
-                                <p className="home__description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti iste ex illum consectetur recusandae.</p>
+                                <p className="home__description">Pationate about creating a seemless user experience using concise code.</p>
                                 <a href="#contact" className="button button--flex contact__button">
                                     Contact Me <i className="uil uil-message button__icon"></i>
                                 </a>
@@ -66,6 +63,8 @@ class Main extends Component {
                         </div>
                     </div>
                 </section>
+
+                {/* About */}
 
                 <section className="about section" id="about">
                     <h2 className="section__title">About Me</h2>
@@ -95,6 +94,8 @@ class Main extends Component {
                     </div>
                 </section>
 
+                {/* Skills */}
+
                 <section className="skills section" id="skills">
                     <h2 className="section__title">Skills</h2>
                     <span className="section__subtitle">My technical level</span>
@@ -102,16 +103,18 @@ class Main extends Component {
                     <div className="skills__container container grid">
                         <div>
                             <div className="skills__content">
-                                <div className="skills__header">
-                                <i className="uil uil-brackets-curly skills__icon"></i>
-                                    <div>
-                                        <h1 className="skills__title">Frontend developer</h1>
-                                        <span className="skills__subtitle">More than 4 years</span>
-                                    </div>
-                                    <i className="uil uil-angle-down skills__arrow"></i>
+                                <div
+                                    className="skills__header"
+                                    onClick={ () => this.setState({isSwitchOn: !isOn}) }>
+                                    <i className="uil uil-brackets-curly skills__icon"></i>
+                                        <div>
+                                            <h1 className="skills__title">Front-End developer</h1>
+                                            <span className="skills__subtitle">More than 2 years</span>
+                                        </div>
+                                    <i className={ isOn ? "uil uil-angle-down skills__arrow" : "uil uil-angle-down skills__arrow skills__arrow__flip" }></i>
                                 </div>
 
-                                <div className="skills__list skills__open grid">
+                                <div className={ isOn ? "skills__list skills__open grid" : "skills__list skills__close grid" }>
                                     <div className="skills__data">
                                         <div className="skills__titles">
                                             <h3 className="skills__name">HTML</h3>
@@ -156,6 +159,144 @@ class Main extends Component {
                         </div>
                     </div>
                 </section>
+
+                {/* Portfolio */}
+
+                <section className="portfolio section" id="portfolio">
+                    <h2 className="section__title">Portfolio</h2>
+                    <span className="section__subtitle">Most recent work</span>
+
+                    <div className="portfolio__container gridcontainer">
+                        <Slider />
+
+                            {/* <div className="portfolio__content grid">
+                                <img src="" alt="" className="portfolio__img" />
+                                
+                                <div className="portfolio__data">
+                                    <h3 className="portfolio__title">Modern Website</h3>
+                                    <p className="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, qui.</p>
+                                    <a href="" className="button button--flex button--small portfolio__button">
+                                        Demo
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div className="portfolio__content grid">
+                                <img src="" alt="" className="portfolio__img" />
+                                
+                                <div className="portfolio__data">
+                                    <h3 className="portfolio__title">Modern Website</h3>
+                                    <p className="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, qui.</p>
+                                    <a href="" className="button button--flex button--small portfolio__button">
+                                        Demo
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="portfolio__content grid">
+                                <img src="" alt="" className="portfolio__img" />
+                                
+                                <div className="portfolio__data">
+                                    <h3 className="portfolio__title">Modern Website</h3>
+                                    <p className="portfolio__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, qui.</p>
+                                    <a href="" className="button button--flex button--small portfolio__button">
+                                        Demo
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div> */}
+                    </div>
+                </section>
+
+                {/* Contact */}
+
+                <section className="contact section" id="contact">
+                    <h2 className="section__title">Contact Me</h2>
+                    <span className="section__subtitle">Get in touch</span>
+
+                    <div className="contact__container container grid">
+                        <div>
+                            <div className="contact__information">
+                                <i className="uil uil-phone contact__icon"></i>
+
+                                <div>
+                                    <h3 className="contact__title">Call Me</h3>
+                                    <span className="contact__subtitle">314-659-7788</span>
+                                </div>
+                            </div>
+
+                            <div className="contact__information">
+                                <i className="uil uil-envelope contact__icon"></i>
+
+                                <div>
+                                    <h3 className="contact__title">Email</h3>
+                                    <span className="contact__subtitle">ocean.abernathy@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div className="contact__information">
+                            <i className="uil uil-map-marker contact__icon"></i>
+
+                                <div>
+                                    <h3 className="contact__title">Location</h3>
+                                    <span className="contact__subtitle">Phoenix, AZ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="" className="contact__form grid">
+                            <div className="contact__inputs grid">
+                                <div className="contact__content">
+                                    <label htmlFor="" className="contact__label">Name</label>
+                                    <input type="text" className="contact__input" />
+                                </div>
+                                <div className="contact__content">
+                                    <label htmlFor="" className="contact__label">Email</label>
+                                    <input type="email" className="contact__input" />
+                                </div>
+                            </div>
+                            <div className="contact__content">
+                                <label htmlFor="" className="contact__label">Message</label>
+                                <textarea name="" id="" cols="0" rows="7" className="contact__input"></textarea>
+                            </div>
+
+                            <div>
+                                <a href="#" className="message__button button button--flex">
+                                    Send Message
+                                    <i className="uil uil-message button__icon"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <footer className="footer">
+                    <div className="footer__bg">
+                        <div className="footer__container container grid">
+                            <div>
+                                <h1 className="footer__title">Ocean</h1>
+                                <span className="footer__subtitle">Front-End Wev Developer</span>
+                            </div>
+
+                            <ul className="footer__links">
+                                <li>
+                                    <a href="#about" className="footer__link">About</a>
+                                </li>
+                                <li>
+                                    <a href="#portfolio" className="footer__link">Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" className="footer__link">Contact me</a>
+                                </li>
+                            </ul>
+
+                            <p className="footer__copy">&#169; 2021 Ocean Abernathy</p>
+                        </div>
+                    </div>
+                </footer>
+
             </main>
         )
     }
