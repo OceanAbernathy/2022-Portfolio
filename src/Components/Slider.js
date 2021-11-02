@@ -32,24 +32,25 @@ export default function Slider() {
             {dataSlider.map((obj, index) => {
                 return (
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-                        <img
-                        src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" 
-                        />
-                        <p className="slider__img__title">{obj.title}</p>
+                        <div className="slider__projects">
+                            <img className="slider__img" src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" />
+                            <BtnSlider moveSlide={nextSlide} direction={"next"} />
+                            <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+                            <div className="container__dots">
+                                {Array.from({length: 3}).map((item, index) => (
+                                    <div key={index}
+                                    onClick={() => moveDot(index + 1)}
+                                    className={slideIndex === index + 1 ? "dot active" : "dot"}
+                                    ></div>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        <h3 className="slider__img__title">{obj.title}</h3>
+                        <p className="slider__img__about">{obj.about}</p>
                     </div>
                 )
             })}
-            <BtnSlider moveSlide={nextSlide} direction={"next"} />
-            <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-
-            <div className="container__dots">
-                {Array.from({length: 3}).map((item, index) => (
-                    <div key={index}
-                    onClick={() => moveDot(index + 1)}
-                    className={slideIndex === index + 1 ? "dot active" : "dot"}
-                    ></div>
-                ))}
-            </div>
         </div>
     )
 };
