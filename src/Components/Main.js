@@ -58,7 +58,7 @@ class Main extends Component {
                             <div className="home__data">
                                 <h1 className="home__title">Hello, my name is <span className="home__title__span">Ocean</span>.</h1>
                                 <h2 className="home__subtitle">Front-End Web Developer</h2>
-                                <p className="home__description">Pationate about creating a seemless user experience using concise code.</p>
+                                <p className="home__description">Pationate about creating a seamless user experience using concise code.</p>
                                 <a href="#contact" className="button button--flex contact__button">
                                     Contact Me <i className="uil uil-message button__icon"></i>
                                 </a>

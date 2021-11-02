@@ -620,7 +620,7 @@ img {
 
 .slider__container {
   max-width: 700px;
-  height: 30rem;
+  height: 420px;
   margin: 100px auto 0;
   position: relative;
 }
@@ -629,7 +629,6 @@ img {
   display: grid;
   gap: 2rem;
   width: 100%;
-  height: fit-content;
   position: absolute;
   opacity: 0;
   transition: opacity ease-in-out 0.4s;
@@ -637,9 +636,8 @@ img {
 
 .slider__projects {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   position: relative;
-  padding: clamp(.5rem, 8vw, 3.5rem);
   border-radius: 1.5rem;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -647,30 +645,14 @@ img {
   0 12.5px 10px rgba(0, 0, 0, 0.06),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-;
-}
-
-.slider__projects::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-radius: 1.5rem;
-  background: linear-gradient(315deg, hsla(183, 30%, 60%, .13), hsla(0, 30%, 60%, .13));
-  backdrop-filter: blur(.2rem);
-  z-index: -1;
+  0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .slider__img {
   width: 100%;
-  margin: .5rem auto;
-  object-fit: contain;
-  background: rgba(255, 255, 255, .05);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
+  margin: 0 auto;
+  display: block;
+  border-radius: 1.5rem;
   box-shadow: var(--slider-img-box-shadow);
 }
 
@@ -703,6 +685,7 @@ img {
   transform: translateY(-50%);
   transition: .3s;
   margin: 0 .5rem;
+  z-index: 1;
 }
 
 .slider__button img {
@@ -714,7 +697,7 @@ img {
 }
 
 .slider__button.prev {
-  left: 0;
+  left: -5rem;
 }
 
 .slider__button.next:hover,
@@ -732,7 +715,7 @@ img {
 
 .container__dots {
   position: absolute;
-  bottom: 1rem;
+  bottom: .05rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -752,6 +735,10 @@ img {
 }
 
 /* Contact */
+
+ .contact {
+   padding-top: 4rem !important;
+ }
 
 .contact__container {
   row-gap: 3rem;

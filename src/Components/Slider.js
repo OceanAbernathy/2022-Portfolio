@@ -34,8 +34,6 @@ export default function Slider() {
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
                         <div className="slider__projects">
                             <img className="slider__img" src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" />
-                            <BtnSlider moveSlide={nextSlide} direction={"next"} />
-                            <BtnSlider moveSlide={prevSlide} direction={"prev"} />
                             <div className="container__dots">
                                 {Array.from({length: 3}).map((item, index) => (
                                     <div key={index}
@@ -51,6 +49,8 @@ export default function Slider() {
                     </div>
                 )
             })}
+            <BtnSlider moveSlide={nextSlide} direction={"next"} />
+            <BtnSlider moveSlide={prevSlide} direction={"prev"} />
         </div>
     )
 };
