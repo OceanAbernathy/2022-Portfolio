@@ -175,7 +175,7 @@ class Main extends Component {
 
                 <section className="portfolio section" id="portfolio">
                     <h2 className="section__title">Portfolio</h2>
-                    <span className="section__subtitle">Most recent work</span>
+                    <span className="portfolio__subtitle">Most recent work</span>
 
                     <div className="portfolio__container container">
                         <Slider />

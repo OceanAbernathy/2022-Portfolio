@@ -31,21 +31,24 @@ export default function Slider() {
         <div className="slider__container">
             {dataSlider.map((obj, index) => {
                 return (
-                    <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-                        <div className="slider__projects">
-                            <img className="slider__img" src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" />
-                            <div className="container__dots">
-                                {Array.from({length: 3}).map((item, index) => (
-                                    <div key={index}
-                                    onClick={() => moveDot(index + 1)}
-                                    className={slideIndex === index + 1 ? "dot active" : "dot"}
-                                    ></div>
-                                ))}
+                    <div className="slider__content">
+                        <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
+                            <div className="slider__projects">
+                                <img className="slider__img" src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" />
+                                <div className="container__dots">
+                                    {Array.from({length: 3}).map((item, index) => (
+                                        <div key={index}
+                                        onClick={() => moveDot(index + 1)}
+                                        className={slideIndex === index + 1 ? "dot active" : "dot"}
+                                        ></div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="slider__data">
+                                <h3 className="slider__img__title">{obj.title}</h3>
+                                <p className="slider__img__about">{obj.about}</p>
                             </div>
                         </div>
-                        
-                        <h3 className="slider__img__title">{obj.title}</h3>
-                        <p className="slider__img__about">{obj.about}</p>
                     </div>
                 )
             })}
