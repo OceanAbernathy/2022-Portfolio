@@ -31,7 +31,6 @@ export default function Slider() {
         <div className="slider__container">
             {dataSlider.map((obj, index) => {
                 return (
-                    <div className="slider__content">
                         <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
                             <div className="slider__projects">
                                 <img className="slider__img" src={process.env.PUBLIC_URL + `/Img/img${index + 1}.jpg`} alt="" />
@@ -49,7 +48,6 @@ export default function Slider() {
                                 <p className="slider__img__about">{obj.about}</p>
                             </div>
                         </div>
-                    </div>
                 )
             })}
             <BtnSlider moveSlide={nextSlide} direction={"next"} />
