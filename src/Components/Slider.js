@@ -46,6 +46,14 @@ export default function Slider() {
                             <div className="slider__data">
                                 <h3 className="slider__img__title">{obj.title}</h3>
                                 <p className="slider__img__about">{obj.about}</p>
+                                <div className="slider__data__icons">
+                                    <a href={obj.git} target="_blank" rel="noreferrer">
+                                        <i className="uil uil-github-alt left__icon"></i>
+                                    </a>
+                                    <a href={obj.url} target="_blank" rel="noreferrer">
+                                        <i className="uil uil-message right__icon"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                 )

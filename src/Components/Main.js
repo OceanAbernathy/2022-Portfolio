@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Slider from './Slider.js';
+import Icon from './Wave.js';
 
 class Main extends Component {
 
@@ -58,7 +59,7 @@ class Main extends Component {
                             <div className="home__data">
                                 <h1 className="home__title">Hello, my name is <span className="home__title__span">Ocean</span>.</h1>
                                 <h2 className="home__subtitle">Front-End Web Developer</h2>
-                                <p className="home__description">Pationate about creating a seamless user experience using concise code.</p>
+                                <p className="home__description">Pationate about creating a seamless user experience using clean and efficient code.</p>
                                 <a href="#contact" className="button button--flex contact__button">
                                     Contact Me <i className="uil uil-message button__icon"></i>
                                 </a>
@@ -74,42 +75,32 @@ class Main extends Component {
                     </div>
                 </section>
 
-                {/* About */}
-
-                <section className="about section" id="about">
-                    <h2 className="section__title">About Me</h2>
-                    <span className="section__subtitle">My introduction</span>
-
-                    <div className="about__container container grid">
-                        <div className="about__data">
-                            <div className="about__info">
-                                <div>
-                                    <span className="about__info-title">08+</span>
-                                    <span className="about__info-name">Years <br /> experience</span>
-                                </div>
-
-                                <div>
-                                    <span className="about__info-title">20+</span>
-                                    <span className="about__info-name">Completed <br /> project</span>
-                                </div>
-
-                                <div>
-                                    <span className="about__info-title">05+</span>
-                                    <span className="about__info-name">Companies <br /> worked</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about__data">
-                            <p className="about__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum aperiam iure, nostrum veritatis consectetur, qui eius consequatur quae ab recusandae necessitatibus placeat quaerat quam sed sapiente, inventore pariatur cum ipsa.</p>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Skills */}
 
                 <section className="skills section" id="skills">
                     <h2 className="section__title">Skills</h2>
-                    <span className="section__subtitle">My technical level</span>
+                    <span className="skills__section__subtitle">My technical level</span>
+
+                    <div className="skills__data__container container grid">
+                        <div className="skills__data">
+                            <div className="skills__info">
+                                <div>
+                                    <span className="skills__info-title">02+</span>
+                                    <span className="skills__info-name">Years <br /> experience</span>
+                                </div>
+
+                                <div>
+                                    <span className="skills__info-title">10+</span>
+                                    <span className="skills__info-name">Completed <br /> projects</span>
+                                </div>
+
+                                <div>
+                                    <span className="skills__info-title">03+</span>
+                                    <span className="skills__info-name">Completed <br /> courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="skills__container container grid">
                         <div>
@@ -139,7 +130,7 @@ class Main extends Component {
                                     <div className="skills__data">
                                         <div className="skills__titles">
                                             <h3 className="skills__name">CSS</h3>
-                                            <span className="skills__number">80%</span>
+                                            <span className="skills__number">70%</span>
                                         </div>
                                         <div className="skills__bar">
                                             <span className="skills__percentage skills__css"></span>
@@ -149,7 +140,7 @@ class Main extends Component {
                                     <div className="skills__data">
                                         <div className="skills__titles">
                                             <h3 className="skills__name">JavaScript</h3>
-                                            <span className="skills__number">60%</span>
+                                            <span className="skills__number">50%</span>
                                         </div>
                                         <div className="skills__bar">
                                             <span className="skills__percentage skills__js"></span>
@@ -218,7 +209,7 @@ class Main extends Component {
                             </div>
                         </div>
 
-                        <form action="" className="contact__form grid">
+                        <form action="mailto:ocean.abernathy@gmail.com" className="contact__form grid">
                             <div className="contact__inputs grid">
                                 <div className="contact__content">
                                     <label htmlFor="" className="contact__label">Name</label>
@@ -235,10 +226,10 @@ class Main extends Component {
                             </div>
 
                             <div>
-                                <a href="#" className="message__button button button--flex">
+                                <button className="message__button button button--flex">
                                     Send Message
                                     <i className="uil uil-message button__icon"></i>
-                                </a>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -266,6 +257,7 @@ class Main extends Component {
 
                             <p className="footer__copy">&#169; 2021 Ocean Abernathy</p>
                         </div>
+                        <Icon />
                     </div>
                 </footer>
                 

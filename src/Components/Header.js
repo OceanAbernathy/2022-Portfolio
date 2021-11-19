@@ -88,7 +88,7 @@ function Header() {
     return (
         <header className="header" id="header">
             <nav className="nav container">
-                <a href="#" className="nav__logo">Ocean</a>
+                <a href="http://oceanabernathy.com/" className="nav__logo">Ocean</a>
 
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list grid">
