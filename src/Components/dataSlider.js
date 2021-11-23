@@ -4,23 +4,23 @@ const dataSlider = [
   {
     id: uuidv4(),
     title: "FamPicks",
-    about: "FamPicks is a competetive college football app that tracks weekly teams, game times, and records the score in real time. I collaborated with another developer who wrote all the .Vue for this project",
-    git: "http://oceanabernathy.com/fampicks/",
-    url: "https://github.com/brandiquintos/fampicks"
+    about: "FamPicks is a competetive college football app that tracks weekly teams, game times, and records the score in real time.",
+    git: "https://github.com/brandiquintos/fampicks",
+    url: "http://oceanabernathy.com/fampicks/"
   },
   {
     id: uuidv4(),
     title: "Welcome Form",
-    about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consequuntur.",
-    git: "http://oceanabernathy.com/SlidingForm/",
-    url: "https://github.com/OceanAbernathy/sliding_form"
+    about: "Simple sign in/sign up form that utilizes an interactive toggle to switch between options.",
+    git: "https://github.com/OceanAbernathy/sliding_form",
+    url: "http://oceanabernathy.com/SlidingForm/"
   },
   {
     id: uuidv4(),
     title: "Cybersafe",
-    about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consequuntur.",
-    git: "http://oceanabernathy.com/Cyber/",
-    url: "https://github.com/OceanAbernathy/cybersafe"
+    about: "Sample page created from a mockup, converted to be both desktop and mobile friendly.",
+    git: "https://github.com/OceanAbernathy/cybersafe",
+    url: "http://oceanabernathy.com/Cyber/"
   },
 ];
 

@@ -88,36 +88,31 @@ function Header() {
     return (
         <header className="header" id="header">
             <nav className="nav container">
-                <a href="http://oceanabernathy.com/" className="nav__logo">Ocean</a>
+                <a href="#home" className="nav__logo">Ocean</a>
 
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list grid">
-                        <li className="nav__item">
+                        <li className="nav__item item-1">
                             <a href="#home" className="nav__link active-link">
                                 <i className="uil uil-home nav__icon"></i> Home
                             </a>
                         </li>
-                        <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-                        <li className="nav__item">
+                        <li className="nav__item item-2">
                             <a href="#skills" className="nav__link">
                                 <i className="uil uil-file-alt nav__icon"></i> Skills
                             </a>
                         </li>
-                        <li className="nav__item">
+                        <li className="nav__item item-3">
                             <a href="#portfolio" className="nav__link">
                                 <i className="uil uil-scenery nav__icon"></i> Portfolio
                             </a>
                         </li>
-                        <li className="nav__item">
+                        <li className="nav__item item-4">
                             <a href="http://oceanabernathy.com/Ocean-Abernathy-Resume.pdf" target="_blank" rel='noreferrer' className="nav__link">
                                 <i className="uil uil-file-download nav__icon"></i> Resume
                             </a>
                         </li>
-                        <li className="nav__item">
+                        <li className="nav__item item-5">
                             <a href="#contact" className="nav__link">
                                 <i className="uil uil-message nav__icon"></i> Contact
                             </a>
