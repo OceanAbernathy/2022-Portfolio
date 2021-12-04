@@ -146,11 +146,6 @@ body.dark-theme {
   color: var(--theme-hover);
 }
 
-.change-theme:active {
-  transition: .5s;
-  transform: rotate(-360deg);
-}
-
 /* Base */
 
 *, *::before, *::after {
@@ -305,9 +300,9 @@ img {
 
 /* Active Link */
 
-/* .active-link {
+.active-link {
   color: var(--main-color);
-} */
+}
 
 .active-link:hover {
   color: var(--active-link-hover);
@@ -816,7 +811,7 @@ img {
 }
 
 .active {
-  background-color: var(--icon-color);
+  background-color: var(--main-color);
 }
 
 /* Contact */
