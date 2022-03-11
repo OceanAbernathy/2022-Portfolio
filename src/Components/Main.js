@@ -9,6 +9,7 @@ class Main extends Component {
   render() {
     const isOn = this.state.isSwitchOn;
 
+
     function scrollUp() {
       const scrollUp = document.getElementById('scroll-up');
       if (this.scrollY >= 560) {
@@ -27,6 +28,7 @@ class Main extends Component {
 
         <section className='home section' id='home'>
           <div className='home__container container grid'>
+            <div className='hello'></div>
             <div className='home__content   '>
               <div className='home__img'>
                 <div className='home__social'>
@@ -341,7 +343,9 @@ class Main extends Component {
                   </li>
                 </ul>
 
-                <p className='footer__copy'>&#169; 2021 Ocean Abernathy</p>
+                <p className='footer__copy'>
+                  &#169; {currentYear} Ocean Abernathy
+                </p>
               </div>
             </div>
           </footer>
