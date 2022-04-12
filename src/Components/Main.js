@@ -9,6 +9,7 @@ class Main extends Component {
   render() {
     const isOn = this.state.isSwitchOn;
 
+    let currentYear = new Date().getFullYear();
 
     function scrollUp() {
       const scrollUp = document.getElementById('scroll-up');
