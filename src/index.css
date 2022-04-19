@@ -167,6 +167,7 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--standard-font-size);
+  letter-spacing: 0.04rem;
   background-color: var(--light-accent);
   background-image: url('./Image/texture.png');
   background-repeat: repeat;
@@ -436,7 +437,6 @@ img {
   font-size: var(--h3-font-size);
   color: var(--icon-color);
   font-weight: var(--font-medium-weight);
-  text-shadow: var(--light-text-shadow);
   margin-bottom: var(--mb-0-75);
 }
 
@@ -1254,7 +1254,6 @@ img {
 
   .nav__logo {
     font-size: 1.25em;
-    letter-spacing: 1px;
     -webkit-text-stroke: 0.025rem var(--main-color-darker);
   }
 
