@@ -1355,7 +1355,7 @@ img {
   }
 
   .container {
-    max-width: clamp(900px, 5vw, 1000px);
+    max-width: clamp(900px, 70vw, 2500px);
   }
 
   .title__container {
@@ -1384,6 +1384,36 @@ img {
 
   .skills {
     margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    padding: 2.5rem clamp(2rem, 5vw, 5rem);
+  }
+
+  .nav__logo {
+    font-size: 2rem;
+  }
+
+  .nav__menu {
+    margin-right: 1rem;
+  }
+
+  .nav__link {
+    font-size: 1.25rem;
+  }
+
+  .nav__list {
+    gap: 2.5rem;
+  }
+
+  .change-theme {
+    font-size: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
   }
 }
 
