@@ -322,7 +322,7 @@ class Main extends Component {
                 <div className='title__container'>
                   <h1 className='footer__title'>Ocean</h1>
                   <span className='footer__subtitle'>
-                    Front-End Wev Developer
+                    Front-End Web Developer
                   </span>
                 </div>
 
