@@ -11,11 +11,10 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
-    title: 'Welcome Form',
-    about:
-      'Simple sign in/sign up form that utilizes an interactive toggle to switch between options.',
-    git: 'https://github.com/OceanAbernathy/sliding_form',
-    url: 'http://oceanabernathy.com/SlidingForm/',
+    title: 'React Calculator',
+    about: 'Simplistic calculator built with React.',
+    git: 'https://github.com/OceanAbernathy/calculator',
+    url: 'http://oceanabernathy.com/Calculator/',
   },
   {
     id: uuidv4(),
