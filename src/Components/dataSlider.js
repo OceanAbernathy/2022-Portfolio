@@ -12,7 +12,7 @@ const dataSlider = [
   {
     id: uuidv4(),
     title: 'React Calculator',
-    about: 'Simplistic calculator built with React.',
+    about: 'Simplistic implementation of a mobile calculator built in React.',
     git: 'https://github.com/OceanAbernathy/calculator',
     url: 'http://oceanabernathy.com/Calculator/',
   },

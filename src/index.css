@@ -735,6 +735,21 @@ img {
   margin: 2rem;
 }
 
+.slider__img__title {
+  position: relative;
+  width: max-content;
+}
+
+.slider__img__title::after {
+  content: '';
+  position: absolute;
+  background-color: var(--title-color);
+  bottom: 0.25rem;
+  left: 0;
+  right: 0;
+  top: 1.75rem;
+}
+
 .slider__data__icons {
   margin-left: var(--mb-1-5);
 }
