@@ -18,6 +18,13 @@ const dataSlider = [
   },
   {
     id: uuidv4(),
+    title: 'Simple Weather App',
+    about: `'Weather App pulling fromm multiple api's, utilizing hooks and state'`,
+    git: 'https://github.com/OceanAbernathy/simple-weather-app',
+    url: 'http://oceanabernathy.com/SimpleWeatherApp/',
+  },
+  {
+    id: uuidv4(),
     title: 'Cybersafe',
     about:
       'Sample page created from a mockup, converted to be both desktop and mobile friendly.',

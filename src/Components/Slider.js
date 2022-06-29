@@ -39,7 +39,7 @@ export default function Slider() {
                 alt=''
               />
               <div className='container__dots'>
-                {Array.from({ length: 3 }).map((item, index) => (
+                {Array.from({ length: 4 }).map((item, index) => (
                   <div
                     key={index}
                     onClick={() => moveDot(index + 1)}

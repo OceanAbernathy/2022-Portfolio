@@ -735,6 +735,10 @@ img {
   margin: 2rem;
 }
 
+.slider__img__about {
+  line-height: 1.5rem;
+}
+
 .slider__img__title {
   position: relative;
   width: max-content;
