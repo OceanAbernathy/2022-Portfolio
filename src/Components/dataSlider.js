@@ -31,6 +31,14 @@ const dataSlider = [
     git: 'https://github.com/OceanAbernathy/cybersafe',
     url: 'http://oceanabernathy.com/Cyber/',
   },
+  {
+    id: uuidv4(),
+    title: 'Sign Up/Login Form',
+    about:
+      'Basic sign up and login form with password authentication and optional reset',
+    git: 'https://github.com/OceanAbernathy/auth-form',
+    url: 'http://oceanabernathy.com/SignUpLoginForm/',
+  },
 ];
 
 export default dataSlider;

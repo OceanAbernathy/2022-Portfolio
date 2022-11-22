@@ -1016,7 +1016,7 @@ img {
 /* Scroll Bar */
 
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 8px;
   background-color: var(--scroll-bar-color);
   border-radius: 0.5rem;
 }
@@ -1209,10 +1209,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    margin: 0;
-  }
-
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1241,7 +1237,6 @@ img {
     bottom: initial;
   }
 
-  .header,
   .main,
   .footer__container {
     padding: 0 1rem;
@@ -1354,7 +1349,6 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .header,
   .main,
   .footer__container {
     padding: 0;
