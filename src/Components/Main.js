@@ -351,7 +351,7 @@ class Main extends Component {
             </div>
           </footer>
 
-          <a href='#' className='scrollup' id='scroll-up'>
+          <a href='#home' className='scrollup' id='scroll-up'>
             <i className='uil uil-arrow-up scrollup__icon'></i>
           </a>
         </div>

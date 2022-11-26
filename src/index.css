@@ -164,7 +164,7 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height) 0;
+  margin: 0;
   font-family: var(--body-font);
   font-size: var(--standard-font-size);
   letter-spacing: 0.04rem;
@@ -1178,6 +1178,10 @@ img {
     box-shadow: var(--box-shadow);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
+  }
+
+  body {
+    margin: 0 0 var(--header-height) 0;
   }
 
   /* Show Menu */
