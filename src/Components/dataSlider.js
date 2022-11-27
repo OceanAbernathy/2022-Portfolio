@@ -4,7 +4,8 @@ const dataSlider = [
   {
     id: uuidv4(),
     title: 'Modern Banking',
-    about: 'Banking app info and pricing page created in React with Vite.',
+    about:
+      'Banking app information and pricing page created in React with Vite, using Tailwind CSS.',
     git: 'https://github.com/OceanAbernathy/BankApp',
     url: 'http://oceanabernathy.com/BankApp/',
   },
@@ -43,7 +44,7 @@ const dataSlider = [
     id: uuidv4(),
     title: 'FamPicks',
     about:
-      'FamPicks is a competetive college football app that tracks weekly teams, game times, and records the score in real time.',
+      'FamPicks is a competitive college football app that tracks weekly teams, game times, and records the score in real time.',
     git: 'https://github.com/brandiquintos/fampicks',
     url: 'http://oceanabernathy.com/fampicks/',
   },
